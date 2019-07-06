@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hackaton</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <style>
+    
+    form{
+            background-image: url('https://www.wealthmanagement.com/sites/wealthmanagement.com/files/uploads/2015/11/thinkstockphotos-480681166.jpg');
+            background-repeat: no-repeat;
+        border-style: inset;
+        border-width: 2.5px;   
+        position: stick;
+    }
+    #likes{
+        position: absolute;
+     right: 200px;
+    font-size: 18px;
+    }
+    .cosseti{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       padding-left: 700px;
+            }
+            
+    input{
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+            }
+    input:focus {
+  width: 100%;
+}
+    </style>
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+     google.load("visualization", "1", {packages:["corechart"]});
+     google.setOnLoadCallback(drawChart);
+     function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+       ['Пол', 'Лайки'],
+       ['Девушки',     50],
+       ['Мужчины', 25],
+
+      ]);
+      var options = {
+       title: 'Количество лайкнов',
+       is3D: true,
+       pieResidueSliceLabel: 'Остальное'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('likes'));
+       chart.draw(data, options);
+     }
+    </script>
+</head>
+<body>
+    <header>
+            <form>
+                    <h2>Your id</h2><br>
+                    <button > 
+                        <i class="logo-instagram"></i>
+                    </button>
+                    <input type="text" name="search" placeholder="Search..">    </form>
+    </header>
+    
+        <div id="likes" style="width: 500px; height: 400px;"></div>
+        <script>
+                export default{
+                    //show:true,
+                    data(){
+                        return {
+                            show:true,
+                        }
+                    }
+                }
+            </script>
+        
+    </body>
+</html>
