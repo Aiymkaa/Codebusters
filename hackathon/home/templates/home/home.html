@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>{{name}} followed by {{followed_by}} people and follows {{follows}} people</h1>
+<html lang="en">
+<head>
+    <style>
+    body{
+        background-image: url('https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiktKzN1qHjAhXSxMQBHXMjATEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fphot&psig=AOvVaw0ibR1xPmuT5GJYGtN9cp1-&ust=1562550029429832');
+        background-size: cover;
+    }
+    .link{
+        color:white;
+        font-size: 400%;
+        border-radius: 25px;
+        margin-left: 25%;
+        margin-top: 540px;
+        background-color:rgb(50, 54, 58);
+          }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="proekt">
+      <form method="post">
+        {% csrf_token  %}
+        {{form.as_p}}
+        <button class="button1" type="submit">Submit</button>
+
+    </form>
+
+    </div>
     </body>
 </html>
+<script  src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"> </script>

@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
 ]
+
+#787f66aa787f66aa787f66aa147814e0f27787f787f66aa255fb31857135b74b37c31df
+#https://api.vk.com/method/friends_get?user_id=356906993&access_token=787f66aa787f66aa787f66aa147814e0f27787f787f66aa255fb31857135b74b37c31df&v=5.101
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

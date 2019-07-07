@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{id}}
+    <img src="{{profile_photo}}" alt="">
+    <h1>{{first_name}} {{last_name}}</h1>
+    <p>Количество постов: {{posts_size}}</p>
+    <p>Количество лайков на постах: {{post_all_likes}}</p>
+    <p>Среднее количество лайков на один пост: {{average_posts_likes}}</p>
+    <p>Среднее количество репостов на один пост: {{average_posts_reposts}}</p>
+    <p>Количество друзей: {{number_of_friends}}</p>
+    <p>Количество женщин: {{female_friends}}</p>
+    <p>Количество мужчин: {{male_friends}}</p>
+    {% for key, value in col_countries.items %}
+      <p>{{key}}: {{value}}</p>
+    {% endfor %}
+    <p>Онлайн друзья: {{online}}</p>
+    <p>Офлайн друзья: {{offline}}</p>
+    {{id}}
+    </body>
+</html>
